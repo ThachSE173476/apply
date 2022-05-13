@@ -1,0 +1,104 @@
+@use '../../assets/styles/' as *; 
+
+.footer {
+    max-width: 1920px;
+    width: auto;
+    margin-top: 72px;
+    &__contact {
+        width: inherit;
+        padding: 12px 30px 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $black-color;
+        &--wrap {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            h1 {
+                font-size: 14px;
+                font-weight: 500;
+                color: $white-color;
+            }
+            h3 {
+                font-size: 12px;
+                font-weight: 200;
+                color: $white-color;
+            }
+        }
+        &--icons {
+            display: flex;
+            gap: 15px;
+            i {
+                font-size: 22px;
+                color: $white-color;
+            }
+        }
+    }
+
+    &__nav {
+        width: inherit;
+        padding: 12px 30px 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--wrap {
+            display: flex;
+            li {
+                padding: 0 19px;
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 300;
+                position: relative;
+                i {
+                    font-size: 10px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:nth-child(2), &:nth-child(3) {
+                    border-left: 1px solid $light-grey-color;
+                    border-right: 1px solid $light-grey-color;
+                }
+            }
+        }
+        &--logo {
+            img {
+                width: 179px;
+                height: 11px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .footer {
+        &__contact {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        &__nav {
+            &--wrap {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .footer {
+        &__nav {
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            li {
+                margin-top: 6px;
+                &:nth-child(2), &:nth-child(3) {
+                    border: none;
+                }
+            }
+        }
+    }
+}
